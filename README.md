@@ -22,3 +22,9 @@ Instal packages
 ```bash
 npm install
 ```
+
+## Added bootstrap icons
+https://icons.getbootstrap.com/
+```html
+<img src="images/sprite.svg#icons--stickies-fill" class="svg-icons--stickies-fill-dims" alt="icons--stickies-fill">
+```
