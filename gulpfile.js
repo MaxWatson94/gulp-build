@@ -71,6 +71,7 @@ function sprite() {
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/swiper/swiper-bundle.js',
             'node_modules/@popperjs/core/dist/umd/popper.js',
             'node_modules/bootstrap/dist/js/bootstrap.js',
             'app/js/**/*.js',
@@ -85,6 +86,7 @@ function scripts() {
 function styles() {
     return src([
             'node_modules/bootstrap/dist/css/bootstrap.css',
+            'node_modules/swiper/swiper-bundle.css',
             'app/scss/**/*.scss'
         ])
         .pipe(autoprefixer({overrideBrowserslist: ['last 10 version']}))
