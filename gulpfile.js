@@ -55,7 +55,7 @@ function images() {
 }
 
 function sprite() {
-    return src('app/images/*.svg')
+    return src('app/images/src/**/*.svg')
     .pipe(svgSprite({
         mode: {
             stack: {
@@ -70,6 +70,9 @@ function sprite() {
 
 function scripts() {
     return src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/@popperjs/core/dist/umd/popper.js',
+            'node_modules/bootstrap/dist/js/bootstrap.js',
             'app/js/**/*.js',
             '!app/js/main.min.js'
         ])
@@ -81,6 +84,7 @@ function scripts() {
 
 function styles() {
     return src([
+            'node_modules/bootstrap/dist/css/bootstrap.css',
             'app/scss/**/*.scss'
         ])
         .pipe(autoprefixer({overrideBrowserslist: ['last 10 version']}))
